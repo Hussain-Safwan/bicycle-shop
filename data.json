@@ -1,0 +1,55 @@
+{
+  "cycles": [
+    {
+      "id": "1",
+      "name": "Hero Skyper 26T",
+      "hasDiscount": true,
+      "discount": 30,
+      "orgPrice": 2000,
+      "image": "/images/1.png",
+      "stars": 4
+    },
+    {
+      "id": "2",
+      "name": "Hercules Roadeo A50",
+      "hasDiscount": false,
+      "orgPrice": 1700,
+      "image": "/images/2.png",
+      "stars": 3
+    },
+    {
+      "id": "3",
+      "name": "Hero Stomper 16",
+      "hasDiscount": false,
+      "orgPrice": 1950,
+      "image": "/images/3.png",
+      "stars": 4
+    },
+    {
+      "id": "4",
+      "name": "WaltX Trail 27.5 T",
+      "hasDiscount": true,
+      "discount": 25,
+      "orgPrice": 2000,
+      "image": "/images/4.png",
+      "stars": 4
+    },
+    {
+      "id": "5",
+      "name": "Urban Terrain UT1000",
+      "hasDiscount": false,
+      "orgPrice": 1500,
+      "image": "/images/5.png",
+      "stars": 3
+    },
+    {
+      "id": "6",
+      "name": "Hero Spunky 26TSS",
+      "hasDiscount": true,
+      "discount": 30,
+      "orgPrice": 1750,
+      "image": "/images/6.png",
+      "stars": 4
+    }
+  ]
+}

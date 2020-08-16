@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: 68.75em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: rgba(245, 241, 241, 0.77);
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  background: linear-gradient(to right bottom, #7ed56f, #28b485);
+  padding-bottom: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem;
+  font-family: 'Rancho', cursive;
+
+  header {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-top: 2rem;
+
+    font-size: 5rem;
+    letter-spacing: 3px;
+
+    ion-icon {
+      font-size: 5.5rem;
+      padding: 0 1rem;
+    }
+    p {
+      align-self: center;
+      font-family: 'Rock Salt', cursive;
+      letter-spacing: 1.7px;
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.loader svg {
+  height: 5.5rem;
+  width: 5.5rem;
+  fill: #2b2e4a;
+  transform-origin: 44% 50%;
+  animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bicycleShop {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.3px;
+  max-width: 1230px;
+  margin: auto;
+  padding: 0.7rem 2rem 5rem 2rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .bicycle {
+    border-radius: 5px;
+
+    width: 350px;
+    margin: 1rem;
+    background: white;
+    padding: 1.5rem 2rem 2rem 2rem;
+    position: relative;
+
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 2px 4px 10px #41414198;
+
+    &__image {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 90%;
+        height: 90%;
+      }
+    }
+    &__name {
+      padding-top: 1rem;
+      text-align: center;
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__rating {
+      text-align: center;
+      span {
+        font-size: 1.5rem;
+        padding: 10px 2px;
+        &.checked {
+          color: orange;
+        }
+      }
+    }
+    &__price {
+      display: flex;
+      justify-content: center;
+      p {
+        &:first-child {
+          font-size: 1.7rem;
+        }
+
+        &:last-child {
+          align-self: center;
+          font-size: 1.5rem;
+
+          margin-left: 1rem;
+          color: gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .discount__rate {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 5px 0 5px 0;
+
+      background: #ff2e63;
+      padding: 1.25rem 2rem;
+      color: white;
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.singleBicycle {
+  max-width: 870px;
+  margin: auto;
+  padding: 0.7rem 2rem 3.5rem 2rem;
+
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+
+  box-shadow: 2px 4px 10px #41414198;
+
+  border-radius: 4px;
+
+  position: relative;
+  .goBack {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    svg {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  .singleBicycle_img {
+    width: 380px;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  .singleBicycle_info {
+    padding: 0rem 2rem 1rem 2rem;
+    .singleBicycle_name {
+      font-size: 3rem;
+      font-weight: bolder;
+      p {
+      }
+    }
+
+    .singleBicycle_price {
+      font-size: 2rem;
+      color: #414141;
+      padding-top: 3px;
+      padding-bottom: 1.3rem;
+      border-bottom: 1px solid #c5c5c5;
+      margin-bottom: 1.25rem;
+      p {
+      }
+    }
+
+    .singleBicycle_desc {
+      font-size: 15px;
+      line-height: 175%;
+      text-align: justify;
+      p {
+      }
+    }
+  }
+}

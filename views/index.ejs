@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>The Bicycle Shop</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <header>
+          <h1>The Bicycle Shop</h1>
+        </header>
+      </nav>
+
+      <div class="bicycleShop">
+        <% for (let i=0; i<6; i++) { %>
+
+          <div class="bicycle">
+            <div class="bicycle__image">
+              <img src=".<%= data[i].image %>" alt="Bicycle 1" />
+            </div>
+  
+            <div class="bicycle__name">
+              <a href="/<%= data[i].id %>"><%= data[i].name %></a>
+            </div>
+  
+            <div class="bicycle__rating">
+              
+              <% for (let j=0; j<data[i].stars; j++) { %>
+                <span class="fa fa-star checked"></span>
+              <% } %>
+              <% for (let j=0; j<5 - data[i].stars; j++) { %>
+                <span class="fa fa-star"></span>
+              <% } %>
+            </div>
+  
+            <div class="bicycle__price">
+              <% if (data[i].hasDiscount) { %>
+                <% const price = (data[i].orgPrice - (data[i].orgPrice * data[i].discount/100)).toFixed(2) %>
+                <p class="current_price">$<%= price %></p>
+                <p class="old_price">$<%= data[i].orgPrice %></p>
+              <% } else { %>
+                <p class="current_price">$<%= (data[i].orgPrice).toFixed(2) %></p>
+                <p class="old_price"></p>
+              <% } %>
+            </div>
+  
+            <% if (data[i].hasDiscount) { %>
+              <div class="discount__rate">
+                <p><%= data[i].discount %>% Off</p>
+              </div>
+            <% } %>
+          </div>
+
+        <% } %>
+        
+      </div>
+    </div>
+  </body>
+</html>
